@@ -1,0 +1,307 @@
+/* Imports */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap");
+
+
+/* 
+
+
+font-family: 'Roboto', sans-serif;
+*/
+:root {
+  --black: #000;
+  /* --primary-gold: #BA8E38; */
+  /* --primary-color:  */
+  --primary-gold: #e2bf75;
+  --letter-color: #d6b167;
+  --gold: #f5d996;
+  --white: #fff;
+  --black: #000;
+  --a: #806b42;
+  --b: #8d5a18;
+  --dark-gold: #e0bb69;
+  --medium-gold: #d7b15f;
+  --light-gold: #f6d58c;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+body{
+  font-family: montserrat;
+}
+main{
+  width: 100%;
+}
+nav{
+  background: rgba(0,0,0, .7);
+  height: 80px;
+  width: 100vw;
+  max-width: 1200px;
+  position: fixed;
+  
+  margin: 0 auto;
+  
+}
+label.logo{
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+label.logo a:hover{
+  background: none;
+}
+label.logo img{
+  width: 70px;
+  height: auto;
+  padding: 5px;
+  margin: 5px 0;
+}
+nav ul{
+  float: right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: var(--primary-gold);
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+a.active,a:hover{
+  background: var(--primary-gold);
+  transition: .5s;
+  color: var(--black);
+}
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 50px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+
+/* languages */
+div.languages{
+  position: fixed;
+  top: 20px;
+  right: 50px;
+  display: flex;
+  flex-direction: column;
+}
+div.languages img{
+  max-width: 15px;
+}
+div.languages a:hover{
+  background: none;
+}
+
+/* hero - Home */
+section.hero{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-image: url(../img/bg-hero.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+section.hero .content{
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  height: calc(100% - 150px) ;
+  padding: 10px;
+}
+section.hero .content .video{
+  width: 25%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 20px;
+}
+section.hero .content .video video{
+  width: 100%;
+  height: 100%;
+  
+}
+
+section.hero .content .description{
+  width: 50%;
+  height: 80vh;
+  background-color: rgba(226, 191, 117, .5);
+  text-align: center;
+  padding: 20px;
+  margin: 0 20px;
+}
+section.hero .content .description h2{
+  padding: 20px 0;
+}
+
+
+/* How it work */
+.howItWork{
+  width: 100%;
+  background-color: #090552;
+}
+.teste{
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  color: #fff;
+}
+.howItWork .howItWorkTitle{
+  text-align: center;
+  margin: 20px 20px;
+}
+.howItWork .howItWorkContent{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.howItWork .howItWorkContent .cards{
+  display: flex;
+  flex-direction: row;
+  max-width: 40%;
+}
+.howItWork .howItWorkContent .cards .cardsImg{
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  
+}
+.howItWork .howItWorkContent .cards .cardsImg img{
+  width: 100%;
+}
+.howItWork .howItWorkContent .cards .cardsDescription{
+  padding: 20px;;
+}
+.howItWork .howItWorkContent .cards h2{
+  line-height: 25px;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: rgb(68, 51, 254);
+  margin-bottom: 10px;
+}
+.howItWork .howItWorkContent .cards p{
+  font-size: 10px;
+  text-align: justify;
+}
+
+@media (max-width: 952px){
+  label.logo{
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+}
+@media (max-width: 858px){
+  .checkbtn{
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0, .7);
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: var(--primary-gold);
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+/* hero */
+section.hero{
+  background-image: url(../img/bg-hero.png);
+  background-size: cover;
+  background-repeat:   no-repeat;
+  background-position: top left;
+}
+/* languages */
+div.languages{
+  right: 20px;
+}
+  /* video hero */
+  section.hero .content .video{
+   display: none;
+  }
+  /* description */
+  section.hero .content .description{
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+  }
+  /* How it Work */
+  .howItWork .howItWorkTitle h1{
+    padding: 10px;
+    font-size: 30px;
+  }
+  .howItWork .howItWorkTitle p{
+    padding: 10px;
+  }
+  .howItWork .howItWorkContent .cards{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+  }
+  .howItWork .howItWorkContent .cards .cardsImg{
+    width: 120px;
+  }
+  .howItWork .howItWorkContent .cards h2{
+    font-size: 20px;
+    padding: 10px;
+  }
+  .howItWork .howItWorkContent .cards p{
+    font-size: 16px;
+    text-align: inherit;
+    letter-spacing: 1.5px;
+  }
+}
+
+
